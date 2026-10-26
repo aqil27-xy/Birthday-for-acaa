@@ -26,6 +26,16 @@ keypad.addEventListener("click", function(event) {
   }
 
   updatePINDisplay();
+
+  if (enteredPIN.length === 6) {
+    if (enteredPIN === correctPIN) {
+      pinMessage.textContent = "PIN benar! ❤️ Selamat datang, Acaa!";
+    } else {
+      pinMessage.textContent = "PIN salah, coba lagi ya 🌸";
+      enteredPIN = "";
+      updatePINDisplay();
+    }
+  }
 });
 
 function updatePINDisplay() {
