@@ -367,3 +367,46 @@ footer p { font-size: 11px; }
   }
 }
 ```
+
+/* LOVE LETTER - CLEAN & RESPONSIVE */
+#letter .letter {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 40px);
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+#letter .letter p {
+  margin: 0 0 1.35em;
+  font-size: 1rem;
+  line-height: 1.9;
+  text-align: left;
+}
+
+#letter .letter p:first-child {
+  font-weight: 600;
+}
+
+#letter .letter .signature {
+  margin-top: 2em;
+  margin-bottom: 0;
+  text-align: right;
+  font-style: italic;
+}
+
+@media (max-width: 520px) {
+  #letter .letter {
+    padding: 22px 18px;
+    line-height: 1.85;
+  }
+
+  #letter .letter p {
+    font-size: 0.96rem;
+    line-height: 1.85;
+    margin-bottom: 1.25em;
+  }
+}
