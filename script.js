@@ -28,9 +28,10 @@ keypad.addEventListener("click", function(event) {
   updatePINDisplay();
 
   if (enteredPIN.length === 6) {
-    if (enteredPIN === correctPIN) {
-      pinMessage.textContent = "PIN benar! ❤️ Selamat datang, Acaa!";
-    } else {
+  if (enteredPIN === correctPIN) {
+  document.getElementById("password-screen").style.display = "none";
+  document.getElementById("gift-screen").style.display = "flex";
+} else {
       pinMessage.textContent = "PIN salah, coba lagi ya 🌸";
       enteredPIN = "";
       updatePINDisplay();
@@ -47,3 +48,11 @@ function updatePINDisplay() {
 
   pinMessage.textContent = "";
 }
+
+const openGiftButton = document.getElementById("open-gift");
+const giftMessage = document.getElementById("gift-message");
+
+openGiftButton.addEventListener("click", function() {
+  giftMessage.style.display = "block";
+  openGiftButton.textContent = "A gift made with love 💖";
+});
