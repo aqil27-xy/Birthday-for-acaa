@@ -93,6 +93,66 @@ body {
   background: #a53c60;
 }
 
+/* Tombol hadiah romantis */
+#open-gift {
+  margin-top: 24px;
+  padding: 15px 28px;
+  border: 1px solid #f5b8c8;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #d94f78, #9e2851);
+  color: #fff1f5;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #e7547b33;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#open-gift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px #e7547b66;
+}
+
+#open-gift:active {
+  transform: scale(0.95);
+}
+
+/* Animasi munculnya pesan */
+#gift-message {
+  margin-top: 25px;
+  color: #ffd6e1;
+  font-size: 17px;
+  line-height: 1.8;
+  animation: messageAppear 0.8s ease both;
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layar hadiah */
+#gift-screen {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(
+      circle at top,
+      #672337 0%,
+      #35101d 45%,
+      #18070d 100%
+    );
+}
+
 #pin-message {
   min-height: 20px;
   margin-top: 20px;
