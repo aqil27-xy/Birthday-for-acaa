@@ -1,0 +1,99 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #240b12;
+  color: #fff1f2;
+  font-family: Georgia, serif;
+}
+
+#birthday-app {
+  min-height: 100vh;
+}
+
+#password-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(
+      circle at top,
+      #672337 0%,
+      #35101d 45%,
+      #18070d 100%
+    );
+}
+
+.password-card {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.flower-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.password-card h1 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.password-card p {
+  color: #e8b9c5;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+#pin-display {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+#pin-display span {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #f5c5d1;
+  border-radius: 50%;
+  color: #f5c5d1;
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 58px);
+  justify-content: center;
+  gap: 14px;
+}
+
+#keypad button {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #a45a70;
+  border-radius: 50%;
+  background: #521b2d;
+  color: #fff1f2;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#keypad button:active {
+  transform: scale(0.9);
+  background: #a53c60;
+}
+
+#pin-message {
+  min-height: 20px;
+  margin-top: 20px;
+}
