@@ -49,10 +49,26 @@ function updatePINDisplay() {
   pinMessage.textContent = "";
 }
 
-const openGiftButton = document.getElementById("open-gift");
+
+const giftBox = document.getElementById("gift-box");
 const giftMessage = document.getElementById("gift-message");
 
-openGiftButton.addEventListener("click", function() {
+function openGift() {
+  giftBox.classList.add("opened");
   giftMessage.style.display = "block";
-  openGiftButton.textContent = "A gift made with love 💖";
+
+  const hint = document.querySelector(".gift-hint");
+  if (hint) {
+    hint.textContent = "A little gift, with all my love ❤️";
+  }
+}
+
+giftBox.addEventListener("click", openGift);
+
+giftBox.addEventListener("keydown", function(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    openGift();
+  }
 });
+
