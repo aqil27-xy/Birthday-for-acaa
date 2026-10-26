@@ -249,6 +249,27 @@ footer p { font-size: 11px; }
   .flower { padding: 16px 4px; font-size: 32px; }
   .flower span { font-size: 10px; }
   .memory-grid { gap: 10px; }
+  
+.music-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  padding: 11px 16px;
+  border: 1px solid #f5b8c8;
+  border-radius: 30px;
+  background: #521b2d;
+  color: #fff1f5;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #0004;
+}
+
+.music-toggle:hover {
+  background: #80334d;
+}
+
   .photo-placeholder { min-height: 120px; }
   .quick-nav { gap: 6px; }
   .quick-nav a { font-size: 10px; padding: 6px 9px; }
