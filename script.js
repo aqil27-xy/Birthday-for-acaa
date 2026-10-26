@@ -140,3 +140,28 @@ $("cake").addEventListener("keydown", (event) => {
 $("back-to-top").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const bgMusic = document.getElementById("bg-music");
+const musicToggle = document.getElementById("music-toggle");
+
+bgMusic.volume = 0.3;
+
+async function playMusic() {
+  try {
+    await bgMusic.play();
+    musicToggle.textContent = "⏸ Pause Music";
+  } catch (error) {
+    musicToggle.textContent = "🎵 Tap to Play";
+  }
+}
+
+musicToggle.addEventListener("click", async () => {
+  if (bgMusic.paused) {
+    await playMusic();
+  } else {
+    bgMusic.pause();
+    musicToggle.textContent = "🎵 Play Music";
+  }
+});
+
+document.getElementById("enter-site").addEventListener("click", playMusic);
