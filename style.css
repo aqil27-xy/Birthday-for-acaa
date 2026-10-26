@@ -410,3 +410,19 @@ footer p { font-size: 11px; }
     margin-bottom: 1.25em;
   }
 }
+
+.spotify-songs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto 0;
+}
+
+.spotify-songs iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+}
