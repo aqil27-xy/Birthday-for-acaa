@@ -46,6 +46,8 @@ function updatePIN() {
 
 let audioContext;
 function startMusicOnInteraction() {
+  playMusic();
+}
   // Musik tidak diputar otomatis karena belum ada file audio yang ditambahkan.
   // Playlist di bawah membuka lagu pilihan di YouTube.
 }
