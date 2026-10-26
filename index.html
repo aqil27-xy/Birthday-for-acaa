@@ -4,80 +4,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Acaa, My Love ❤️</title>  
-<link rel="stylesheet" href="style.css">
-
+  <meta name="theme-color" content="#240b12">
+  <title>For Acaa, My Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="hearts-bg" aria-hidden="true">♡　♥　♡　♥　♡</div>
 
-  <main id="birthday-app">
-
-    <section id="password-screen">
-      <div class="password-card">
-
-        <div class="flower-icon">🌸</div>
-
+  <main>
+    <!-- PIN -->
+    <section id="password-screen" class="screen center">
+      <div class="card pin-card">
+        <div class="big-icon">🌸</div>
+        <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
         <h1>For You, My Love</h1>
         <p>Enter our special date</p>
-
-       
-<div id="pin-display">
-  <span>○</span>
-  <span>○</span>
-  <span>○</span>
-  <span>○</span>
-  <span>○</span>
-  <span>○</span>
-</div>
-
-
-       
-<div id="keypad">
-  <button data-digit="1">1</button>
-  <button data-digit="2">2</button>
-  <button data-digit="3">3</button>
-  <button data-digit="4">4</button>
-  <button data-digit="5">5</button>
-  <button data-digit="6">6</button>
-  <button data-digit="7">7</button>
-  <button data-digit="8">8</button>
-  <button data-digit="9">9</button>
-  <button data-action="clear">C</button>
-  <button data-digit="0">0</button>
-  <button data-action="delete">⌫</button>
-</div>
-
-
-        <p id="pin-message"></p>
-
+        <div id="pin-display" aria-label="PIN, 6 digit">
+          <span>○</span><span>○</span><span>○</span>
+          <span>○</span><span>○</span><span>○</span>
+        </div>
+        <div id="keypad" class="keypad">
+          <button data-digit="1">1</button>
+          <button data-digit="2">2</button>
+          <button data-digit="3">3</button>
+          <button data-digit="4">4</button>
+          <button data-digit="5">5</button>
+          <button data-digit="6">6</button>
+          <button data-digit="7">7</button>
+          <button data-digit="8">8</button>
+          <button data-digit="9">9</button>
+          <button data-action="clear">C</button>
+          <button data-digit="0">0</button>
+          <button data-action="delete">⌫</button>
+        </div>
+        <p id="pin-message" class="message" aria-live="polite"></p>
       </div>
     </section>
 
-   
-<section id="gift-screen" style="display: none;">
-  <div class="password-card">
-    <div class="gift-box" id="gift-box" role="button" tabindex="0" aria-label="Buka kotak hadiah">
-      <div class="gift-lid"></div>
-      <div class="gift-ribbon"></div>
-      <div class="gift-body">🎁</div>
+    <!-- GIFT -->
+    <section id="gift-screen" class="screen center hidden">
+      <div class="card gift-card">
+        <p class="eyebrow">MADE WITH LOVE, JUST FOR YOU</p>
+        <h1>Happy Birthday, Acaa! 💗</h1>
+        <p>A little surprise for my favorite person.</p>
+        <button id="gift-box" class="gift-box" aria-label="Buka hadiah">
+          <span class="gift-lid"></span>
+          <span class="gift-body">🎁</span>
+          <span class="gift-ribbon"></span>
+        </button>
+        <p id="gift-hint">Tap the gift to open it ♡</p>
+        <button id="enter-site" class="primary hidden">Open your surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- MAIN BIRTHDAY SITE -->
+    <div id="birthday-content" class="hidden">
+      <header class="hero">
+        <div class="hero-flower">🌷</div>
+        <p class="eyebrow">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+        <h1>Happy Birthday,<br><span>My Dearest Acaa</span> 💗</h1>
+        <p class="hero-sub">August 27 — The Most Special Day</p>
+        <div class="scroll-hint">A little world made just for you ↓</div>
+      </header>
+
+      <nav class="quick-nav" aria-label="Navigasi halaman">
+        <a href="#bouquet">🌷 Flowers</a>
+        <a href="#letter">💌 Letter</a>
+        <a href="#memories">📸 Memories</a>
+        <a href="#playlist">🎵 Playlist</a>
+        <a href="#jar">🫙 Love Jar</a>
+      </nav>
+
+      <!-- BOUQUET -->
+      <section id="bouquet" class="section">
+        <p class="eyebrow">FOR THE PRETTIEST GIRL</p>
+        <h2>A Bouquet for You 🌷</h2>
+        <p class="section-intro">Bunganya mungkin digital, tapi rasa sayangku nyata.</p>
+        <div class="bouquet">
+          <button class="flower" data-title="You Are My Sunshine" data-message="Kamu punya cara sendiri untuk membuat hari-hariku terasa lebih cerah. ☀️">🌻<span>Sunshine</span></button>
+          <button class="flower" data-title="My Favorite Rose" data-message="Kalau aku bisa memilih lagi, aku tetap ingin mengenal dan menyayangimu. 🌹">🌹<span>My Rose</span></button>
+          <button class="flower" data-title="A Little Tulip" data-message="Semoga hidupmu dipenuhi hal-hal kecil yang bikin kamu tersenyum setiap hari. 🌷">🌷<span>My Tulip</span></button>
+          <button class="flower" data-title="Forever Yours" data-message="Terima kasih sudah hadir di hidupku. Aku ingin terus menciptakan kenangan indah bersamamu. 💗">💐<span>Forever</span></button>
+          <button class="flower" data-title="A Soft Reminder" data-message="Saat kamu lelah, ingat bahwa kamu pantas dicintai, dihargai, dan diperlakukan dengan lembut. 🩷">🪷<span>Be Loved</span></button>
+          <button class="flower" data-title="My Lucky Star" data-message="Dari banyak hal baik yang datang ke hidupku, mengenalmu adalah salah satu yang paling kusyukuri. ✨">🌼<span>Lucky Star</span></button>
+        </div>
+        <p class="tiny">Sentuh setiap bunga untuk membaca pesannya ♡</p>
+      </section>
+
+      <!-- LOVE LETTER -->
+      <section id="letter" class="section">
+        <p class="eyebrow">WORDS FROM MY HEART</p>
+        <h2>A Letter for You 💌</h2>
+        <article class="letter">
+          <p>My dearest Acaa,</p>
+          <p>Happy birthday, sayangku. Hari ini adalah hari untuk merayakan seseorang yang begitu berarti bagiku: kamu.</p>
+          <p>Terima kasih sudah menjadi bagian dari ceritaku. Terima kasih untuk obrolan sederhana, tawa kecil, perhatian, dan momen-momen yang mungkin terlihat biasa, tetapi sangat berarti buatku.</p>
+          <p>Aku tidak bisa menjanjikan setiap hari akan selalu sempurna. Tapi aku ingin terus belajar memahami kamu, mendengarkan ceritamu, mendukung impianmu, dan hadir saat kamu membutuhkan seseorang.</p>
+          <p>Semoga umur barumu membawa kesehatan, ketenangan, kebahagiaan, dan banyak alasan untuk tersenyum. Jangan lupa berbangga pada dirimu sendiri, ya. Kamu sudah berjalan sejauh ini. 🤍</p>
+          <p>Thank you for being you. If I could give you one thing, it would be the ability to see yourself through my eyes, so you would know how precious you are to me.</p>
+          <p class="signature">With all my love,<br>Your favorite person ♡</p>
+        </article>
+      </section>
+
+      <!-- MEMORIES -->
+      <section id="memories" class="section">
+        <p class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</p>
+        <h2>Our Little Memories 📸</h2>
+        <p class="section-intro">Ganti kotak-kotak ini dengan foto kalian nanti, bro!</p>
+        <div class="memory-grid">
+          <article class="memory-card">
+            <div class="photo-placeholder">📷<span>Our first photo</span></div>
+            <h3>The Beginning</h3>
+            <p>Awal dari cerita yang ingin terus kuingat.</p>
+          </article>
+          <article class="memory-card">
+            <div class="photo-placeholder">🫶<span>A favorite moment</span></div>
+            <h3>That Happy Day</h3>
+            <p>Momen sederhana yang selalu membuatku tersenyum.</p>
+          </article>
+          <article class="memory-card">
+            <div class="photo-placeholder">🌅<span>A day together</span></div>
+            <h3>Just Us</h3>
+            <p>Tidak harus istimewa bagi dunia, cukup berarti bagi kita.</p>
+          </article>
+          <article class="memory-card">
+            <div class="photo-placeholder">💗<span>My favorite person</span></div>
+            <h3>You & Me</h3>
+            <p>Satu cerita, banyak kenangan yang masih menunggu.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="timeline" class="section">
+        <p class="eyebrow">OUR STORY SO FAR</p>
+        <h2>Little Chapters of Us 🕰️</h2>
+        <div class="timeline">
+          <article><span>01</span><div><h3>First Time We Met</h3><p>Saat cerita kita mulai menemukan jalannya.</p></div></article>
+          <article><span>02</span><div><h3>Our First Conversation</h3><p>Sebuah obrolan yang menjadi awal dari banyak cerita.</p></div></article>
+          <article><span>03</span><div><h3>Our First Outing</h3><p>Hari sederhana yang berubah menjadi kenangan.</p></div></article>
+          <article><span>04</span><div><h3>Beautiful Silence Together</h3><p>Saat bersama saja sudah terasa cukup.</p></div></article>
+          <article><span>05</span><div><h3>Your Very Special Birthday</h3><p>Hari ini, dan harapanku untuk banyak hari indah berikutnya. 💗</p></div></article>
+        </div>
+        <p class="tiny">Nanti kamu bisa ganti cerita dan tanggalnya sesuai kenangan kalian.</p>
+      </section>
+
+      <!-- PLAYLIST -->
+      <section id="playlist" class="section">
+        <p class="eyebrow">A SOUNDTRACK FOR US</p>
+        <h2>Our Special Playlist 🎵</h2>
+        <p class="section-intro">Pilih lagu untuk membukanya di YouTube.</p>
+        <div class="song-list">
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Stephen+Sanchez+Until+I+Found+You"><span>♫</span><div><b>Until I Found You</b><small>Stephen Sanchez</small></div><span>▶</span></a>
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Daniel+Caesar+Best+Part"><span>♫</span><div><b>Best Part</b><small>Daniel Caesar ft. H.E.R.</small></div><span>▶</span></a>
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query= wave+to+earth+love."><span>♫</span><div><b>love.</b><small>wave to earth</small></div><span>▶</span></a>
+          <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Bruno+Major+Nothing"><span>♫</span><div><b>Nothing</b><small>Bruno Major</small></div><span>▶</span></a>
+        </div>
+      </section>
+
+      <!-- GRATITUDE JAR -->
+      <section id="jar" class="section">
+        <p class="eyebrow">A JAR FULL OF LITTLE REASONS</p>
+        <h2>Reasons I Love You 🫙</h2>
+        <p class="section-intro">Kocok toplesnya untuk membaca satu pesan cinta.</p>
+        <button id="shake-jar" class="jar-button" aria-label="Ambil pesan cinta">🫙<span>Tap to shake!</span></button>
+        <div id="jar-note" class="jar-note" aria-live="polite">Your little note is waiting here ♡</div>
+        <p class="tiny">Setiap klik memberikan pesan berbeda sebelum pesan diulang.</p>
+      </section>
+
+      <!-- FINAL CAKE -->
+      <section id="finale" class="section finale">
+        <p class="eyebrow">ONE LAST LITTLE SURPRISE</p>
+        <h2>Make a Wish, Birthday Girl 🎂</h2>
+        <div id="cake" class="cake" role="button" tabindex="0" aria-label="Tiup lilin ulang tahun">
+          <div class="flame">🕯️</div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <p id="cake-hint">Tap the cake to make a wish ♡</p>
+        <div id="final-message" class="hidden">
+          <h2>Happy Birthday, Acaa! 🎉</h2>
+          <p>Semoga hal-hal baik selalu menemukan jalan menuju kamu.</p>
+          <p>Whatever comes next, I hope you always remember how loved you are. ❤️</p>
+          <p class="signature">Today is your day. Always keep shining. ✨</p>
+          <button id="back-to-top" class="primary">Read our story again ↑</button>
+        </div>
+      </section>
+
+      <footer>
+        <div>Made with ♡ especially for Acaa</div>
+        <p>One little website, a million feelings.</p>
+      </footer>
     </div>
+  </main>
 
-    <h1>Happy Birthday, Acaa!</h1>
-    <p>A little surprise, made with all my love.</p>
-    <p class="gift-hint">Tap the gift to open it 💗</p>
-
-    <div id="gift-message" style="display: none;">
-      <p>You are my favorite person in the world. 💖</p>
-      <p>Every moment with you is a gift to me.</p>
-      <p>Today, tomorrow, and always — I choose you. ❤️</p>
+  <!-- FLOWER MESSAGE POPUP -->
+  <div id="flower-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="close-modal" class="close-modal" aria-label="Tutup">×</button>
+      <div class="big-icon">💐</div>
+      <h2 id="modal-title">For You</h2>
+      <p id="modal-message"></p>
+      <button id="modal-ok" class="primary">Aww, thank you ♡</button>
     </div>
   </div>
-</section>
 
-
-  </main>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
