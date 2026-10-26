@@ -335,3 +335,35 @@ footer p { font-size: 11px; }
   }
 }
 ```
+```css
+/* FIX OUR LITTLE MEMORIES ON MOBILE */
+@media screen and (max-width: 600px) {
+  #memories .memory-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #memories .memory-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  #memories .memory-photo {
+    display: block !important;
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    box-sizing: border-box !important;
+  }
+
+  #memories {
+    overflow-wrap: anywhere;
+  }
+}
+```
